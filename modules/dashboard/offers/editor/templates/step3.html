@@ -1,0 +1,60 @@
+<div class="form-field" error="offer_radius">
+    <div class="form-title">Radius of checkin</div>
+    <ul class="form-switcher" ng-switcher="step3.offer.offer_radius" ng-switcher-class="selected">
+        <li ng-switcher-value="0.5">500m</li>
+        <li ng-switcher-value="1">1km</li>
+        <li ng-switcher-value="10">10km</li>
+        <li ng-switcher-value="25000"><span style="font-size: 24px">∞</span> km</li>
+        <li ng-switcher-custom>
+            <span>Other</span>
+            <label>
+                <img ng-switcher-default="1" class="inline" src="assets/close.svg">
+                <input type="text" ng-model="step3.offer.offer_radius">
+            </label>
+        </li>
+    </ul>
+    <div class="form-hint">{{serverErrors.offer_radius}}</div>
+</div>
+<!--<div class="form-field">-->
+    <!--<div class="form-title">Radius of visibility</div>-->
+    <!--<ul class="form-switcher" ng-switcher="step3.visibility_radius" ng-switcher-class="selected">-->
+        <!--<li ng-switcher-value="0.5">500m</li>-->
+        <!--<li ng-switcher-value="1">1km</li>-->
+        <!--<li ng-switcher-value="10">10km</li>-->
+        <!--<li ng-switcher-value="false"><span style="font-size: 24px">∞</span> km</li>-->
+        <!--<li ng-switcher-value="11" ng-switcher-custom>-->
+            <!--<span>Other</span>-->
+            <!--<label>-->
+                <!--<img ng-switcher-default class="inline" src="assets/close.svg">-->
+                <!--<input class="inline" type="number">-->
+            <!--</label>-->
+        <!--</li>-->
+    <!--</ul>-->
+<!--</div>-->
+<!--<div class="form-field">-->
+    <!--<div class="form-title">Social rate limit</div>-->
+    <!--<ul class="form-switcher" ng-switcher="step3.social_limit" ng-switcher-class="selected">-->
+        <!--<li ng-switcher-value="true">On</li>-->
+        <!--<li ng-switcher-value="false">Off</li>-->
+    <!--</ul>-->
+<!--</div>-->
+<div class="form-field" error="need_reservation">
+    <div class="form-title">Need reservation</div>
+    <ul class="form-switcher" ng-switcher="step3.offer.need_reservation" ng-switcher-class="selected">
+        <li ng-switcher-value="true">On</li>
+        <li ng-switcher-value="false">Off</li>
+    </ul>
+    <div class="form-hint">{{serverErrors.need_reservation}}</div>
+</div>
+<div class="form-field" error="default_camera">
+    <div class="form-title">Default frontal camera</div>
+    <ul class="form-switcher" ng-switcher="step3.offer.default_camera" ng-switcher-class="selected">
+        <li ng-switcher-value="0">On</li>
+        <li ng-switcher-value="1">Off</li>
+    </ul>
+    <div class="form-hint">{{serverErrors.default_camera}}</div>
+</div>
+<nav>
+    <a ui-sref="giver.dashboard.offers.edit.step2">Back</a>
+    <div class="btn" ui-sref="giver.dashboard.offers.edit.step4">Next step <img src="assets/right_arrow.svg" alt=""></div>
+</nav>

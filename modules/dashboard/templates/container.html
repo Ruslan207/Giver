@@ -1,0 +1,24 @@
+<div class="dashboard">
+    <header>
+        <div class="logo-title inline">
+            <img class="logo" src="assets/logo.svg" alt="Giver logo">
+        </div>
+        <nav class="inline">
+            <ul>
+                <li ng-class="{active: dashboard.inState('giver.dashboard.offers')}"
+                    ui-sref="giver.dashboard.offers.list">
+                    <span>Offers</span>
+                </li>
+                <li ng-class="{active: dashboard.inState('giver.dashboard.statistics')}"
+                    ui-sref="giver.dashboard.statistics.list">
+                    <span>Statistics</span>
+                </li>
+            </ul>
+        </nav>
+        <div class="space"></div>
+        <div class="user" popover-placement="bottom" uib-popover-template="'modules/dashboard/templates/user_popover.html'" popover-class="user-popover">
+            {{dashboard.profile.email}}
+        </div>
+    </header>
+    <div ui-view="container" class="container"></div>
+</div>

@@ -1,0 +1,95 @@
+.login {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.login .form {
+  width: 410px;
+  height: 356px;
+  background-color: #ffffff;
+  border: 1px solid #f3f3f3;
+  box-sizing: border-box;
+}
+.login .form.restore {
+  height: 276px;
+}
+.login .form:before {
+  content: '';
+  background: url("../../../assets/logo.svg");
+  display: block;
+  width: 67px;
+  height: 67px;
+  margin: 0 auto;
+  transform: translateY(-34px);
+}
+.login .form h1 {
+  font-family: ProximaNova;
+  font-size: 22px;
+  font-weight: 600;
+  color: #13081e;
+  margin: -18px 0 26px;
+  text-align: center;
+}
+.login .form form {
+  padding: 19px 25px 30px;
+}
+.login footer {
+  width: 410px;
+  font-family: ProximaNova;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 16px;
+}
+.login footer a {
+  color: #716b78;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 600;
+}
+.login footer a:visited {
+  color: #716b78;
+}
+.login input[type=text],
+.login input[type=email],
+.login input[type=number],
+.login input[type=password] {
+  width: 360px;
+  height: 45px;
+  background-color: #fafafb;
+  border: solid 1px #eceaee;
+  outline: none;
+  padding-left: 20px;
+  box-sizing: border-box;
+  font-family: ProximaNova;
+  font-size: 12px;
+  font-weight: 600;
+  color: #13081e;
+  display: block;
+  margin-top: 3px;
+}
+.login button,
+.login input[type=submit] {
+  width: 360px;
+  height: 45px;
+  background-color: #30144d;
+  font-family: ProximaNova;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  color: #ffffff;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  margin-top: 15px;
+}
+.login label {
+  font-family: ProximaNova;
+  font-size: 12px;
+  color: #716b78;
+  display: block;
+}
+.login label:not(:first-child) {
+  margin-top: 14px;
+}

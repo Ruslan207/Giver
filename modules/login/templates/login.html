@@ -1,0 +1,19 @@
+<div class="form">
+    <h1>Welcome! Please login.</h1>
+    <hr>
+    <form>
+        <label>
+            Log in with your e-mail address
+            <input type="email" ng-model="login.mail">
+        </label>
+        <label>
+            Password
+            <input type="password" ng-model="login.pass">
+        </label>
+        <input type="submit" ng-click="login.authorize()" value="Log in to Dashboard">
+    </form>
+</div>
+<footer>
+    <a href="mailto:support@thegiver.co">Don't receive registration info? Contact us</a>
+    <a ui-sref="giver.restore">Forgot Password?</a>
+</footer>

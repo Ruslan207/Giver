@@ -1,0 +1,153 @@
+<div class="offers details">
+	<h1>{{stats.data.offer.title}}</h1>
+	<div class="row">
+		<div class="col-md-6">
+			<div class="panel">
+				<section class="total">
+					<span class="key">Total checkins</span>
+					<span class="value">{{stats.data.approved_count + stats.data.declined_count}}</span>
+				</section>
+				<section class="approved">
+					<div>
+						<span class="key">Approved</span>
+						<div class="progress">
+							<div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40"
+							     aria-valuemin="0" aria-valuemax="100"
+							     style="width:{{stats.data.approved_count*100/(stats.data.approved_count + stats.data.declined_count)}}%">
+							</div>
+						</div>
+						<span class="value">{{stats.data.approved_count}}</span>
+					</div>
+					<div>
+						<span class="key">Declined</span>
+						<div class="progress">
+							<div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="40"
+							     aria-valuemin="0" aria-valuemax="100"
+							     style="width:{{stats.data.declined_count*100/(stats.data.approved_count + stats.data.declined_count)}}%">
+							</div>
+						</div>
+						<span class="value">{{stats.data.declined_count}}</span>
+					</div>
+				</section>
+				<section class="summary">
+					<div class="row">
+						<div class="col-md-4 field">
+							<div>
+								<img src="assets/like.svg" alt="">
+							</div>
+							<div>
+								<div class="key">Likes</div>
+								<div class="value">{{stats.data.platforms.all.total_likes}}</div>
+							</div>
+						</div>
+						<div class="col-md-4 field">
+							<div>
+								<img src="assets/share.svg" alt="">
+							</div>
+							<div>
+								<div class="key">shares</div>
+								<div class="value">{{stats.data.platforms.all.total_shares}}</div>
+							</div>
+						</div>
+						<div class="col-md-4 field">
+							<div>
+								<img src="assets/comment.svg" alt="">
+							</div>
+							<div>
+								<div class="key">comments</div>
+								<div class="value">{{stats.data.platforms.all.total_comments}}</div>
+							</div>
+						</div>
+					</div>
+				</section>
+			</div>
+			<div class="panel platforms">
+				<div>
+					<img src="assets/apple.png"
+					     srcset="assets/apple@2x.png 2x,
+					 assets/apple@3x.png 3x">
+					<span class="value">{{
+						stats.data.platforms.ios.by_gender_female+
+						stats.data.platforms.ios.by_gender_male +
+						stats.data.platforms.ios.by_gender_unknown
+						}}
+					</span>
+					<span class="key">iOS users</span>
+				</div>
+				<div>
+					<img src="assets/android.png"
+					     srcset="assets/android@2x.png 2x,
+					 assets/android@3x.png 3x">
+					<span class="value">{{
+						stats.data.platforms.android.by_gender_female+
+						stats.data.platforms.android.by_gender_male +
+						stats.data.platforms.android.by_gender_unknown
+						}}
+					</span>
+					<span class="key">Android users</span>
+				</div>
+			</div>
+			<div class="panel">
+				<section class="activity">
+					<span class="key">Average checkin time per one user</span>
+					<span class="value">{{(stats.data.avarage_checkin_time||0)/60|number:0}}min {{(stats.data.avarage_checkin_time||0)%60|number:0}}sec</span>
+				</section>
+				<section class="activity">
+					<span class="key">Approximate Facebook posts quantity</span>
+					<span class="value">{{stats.data.platforms.all.total_social_coverage|number:0}}
+					</span>
+				</section>
+				<section class="platforms">
+					<div>
+						<img src="assets/male.svg" alt="">
+						<span class="value">{{stats.data.platforms.all.by_gender_male}}</span>
+						<span class="key">Male</span>
+					</div>
+					<div>
+						<img src="assets/female.svg" alt="">
+						<span class="value">{{stats.data.platforms.all.by_gender_female}}</span>
+						<span class="key">Female</span>
+					</div>
+				</section>
+			</div>
+		</div>
+		<div class="col-md-6">
+			<div class="panel post" ng-repeat="post in stats.data.posts">
+				<div class="photo">
+					<img class="" ng-src="{{post.photo}}" alt="">
+					<div class="comment">
+						<div>Post comment:</div>
+						<div class="message">{{post.message}}</div>
+					</div>
+				</div>
+				<div class="info">
+					<section>
+						<div class="user">
+							<div class="rate">{{post.rate|number:1}}</div>
+							<div>
+								<div class="name">{{post.user_name}}</div>
+								<div class="friends"><span class="count">{{post.friends_count}}</span> friends</div>
+							</div>
+						</div>
+					</section>
+					<section class="summary">
+						<div class="row">
+							<div class="col-md-4 field">
+								<img src="assets/like.svg" alt="">
+								<div class="value">{{post.likes_count}}</div>
+							</div>
+							<div class="col-md-4 field">
+								<img src="assets/share.svg" alt="">
+								<div class="value">{{post.shares_count}}</div>
+							</div>
+							<div class="col-md-4 field">
+								<img src="assets/comment.svg" alt="">
+								<div class="value">{{post.comments_count}}</div>
+							</div>
+						</div>
+					</section>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

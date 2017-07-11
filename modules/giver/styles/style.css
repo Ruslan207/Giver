@@ -1,0 +1,44 @@
+body {
+  margin: 0;
+  padding: 0;
+  min-width: 1040px;
+  background-color: #fafafb;
+}
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+button,
+input {
+  outline: none;
+}
+button {
+  cursor: pointer;
+}
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+}
+hr {
+  border: none;
+  height: 1px;
+  width: 100%;
+  background: #efefef;
+}
+@font-face {
+  font-family: "ProximaNova";
+  src: url("../../../fonts/Proxima Nova Regular.otf");
+}
+@font-face {
+  font-family: "ProximaNova";
+  src: url("../../../fonts/Proxima Nova Semibold.otf");
+  font-weight: 600;
+}
+@font-face {
+  font-family: "ProximaNova";
+  src: url("../../../fonts/Proxima Nova Bold.otf");
+  font-weight: bold;
+}

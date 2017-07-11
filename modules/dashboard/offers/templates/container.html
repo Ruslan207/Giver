@@ -1,0 +1,173 @@
+<div class="offers">
+    <h1>Offers</h1>
+    <div class="panel">
+        <!--<div class="dropdown-container">-->
+            <!--<div>-->
+                <!--<label>Sort by:</label>-->
+                <!--<div uib-dropdown>-->
+                    <!--<button type="button" class="btn-group" uib-dropdown-toggle ng-disabled="disabled">-->
+                        <!--Button dropdown-->
+                    <!--</button>-->
+                    <!--<ul uib-dropdown-menu role="menu">-->
+                        <!--<li role="menuitem"><a href="#">Action</a></li>-->
+                        <!--<li role="menuitem"><a href="#">Another action</a></li>-->
+                        <!--<li role="menuitem"><a href="#">Something else here</a></li>-->
+                        <!--<li role="menuitem"><a href="#">Separated link</a></li>-->
+                    <!--</ul>-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--<div>-->
+                <!--<label>City:</label>-->
+                <!--<div uib-dropdown>-->
+                    <!--<button type="button" class="btn-group" uib-dropdown-toggle ng-disabled="disabled">-->
+                        <!--Button dropdown-->
+                    <!--</button>-->
+                    <!--<ul uib-dropdown-menu role="menu">-->
+                        <!--<li role="menuitem"><a href="#">Action</a></li>-->
+                        <!--<li role="menuitem"><a href="#">Another action</a></li>-->
+                        <!--<li role="menuitem"><a href="#">Something else here</a></li>-->
+                        <!--<li role="menuitem"><a href="#">Separated link</a></li>-->
+                    <!--</ul>-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--<div>-->
+                <!--<label>Type:</label>-->
+                <!--<div uib-dropdown>-->
+                    <!--<button type="button" class="btn-group" uib-dropdown-toggle ng-disabled="disabled">-->
+                        <!--Button dropdown-->
+                    <!--</button>-->
+                    <!--<ul uib-dropdown-menu role="menu">-->
+                        <!--<li role="menuitem"><a href="#">Action</a></li>-->
+                        <!--<li role="menuitem"><a href="#">Another action</a></li>-->
+                        <!--<li role="menuitem"><a href="#">Something else here</a></li>-->
+                        <!--<li role="menuitem"><a href="#">Separated link</a></li>-->
+                    <!--</ul>-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</div>-->
+        <ul class="list">
+            <li class="add" ng-click="offers.chooseType()">
+                <!--<li class="add" ui-sref="giver.dashboard.offers.edit.step1">-->
+                <img src="assets/add-icon.svg" alt="">
+                Add new offer
+            </li>
+            <li ng-repeat="offer in offers.offers | filter:{is_archived:false}">
+                <div class="offer" toggle-class="open" ng-if="offer.is_active">
+                    <div class="image" style="background-image: url('{{offer.preview}}')"></div>
+                    <div class="name">{{offer.title}}</div>
+                    <div class="date">Updated {{offer.updated | date: 'dd.MM.yyyy'}}</div>
+                    <div class="overlay">
+                        <div class="controls">
+                            <button stop-bubbling class="top" ng-click="offers.editOffer(offer)">
+                                <img src="assets/pencil.svg" alt="">
+                                <span>Edit</span>
+                            </button>
+                            <button stop-bubbling class="top" ng-click="offers.copyOffer(offer)">
+                                <img src="assets/pencil.svg" alt="">
+                                <span>Copy</span>
+                            </button>
+                        </div>
+                        <div class="location">{{offer.address}}</div>
+                        <div class="description">{{offer.gift_description}}</div>
+                        <div class="bottom">
+                            <button stop-bubbling ng-click="offers.stopOffer(offer)">
+                                <img src="assets/close.svg" alt="">
+                                <span>Stop</span>
+                            </button>
+                            <button stop-bubbling ng-click="offers.archiveOffer(offer)">
+                                <img src="assets/arrow.svg" alt="">
+                                <span>Archive</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="offer inactive" ng-if="!offer.is_active">
+                    <div class="image" style="background-image: url('{{offer.preview}}')"></div>
+                    <div class="name">{{offer.title}}</div>
+                    <div class="date">Updated {{offer.updated | date: 'dd.MM.yyyy'}}</div>
+                    <div class="inactive">
+                        Offer inactive
+                    </div>
+                    <div class="overlay">
+                        <div class="controls">
+                            <button class="top" ng-click="offers.editOffer(offer)">
+                                <img src="assets/pencil.svg" alt="">
+                                <span>Edit</span>
+                            </button>
+                        </div>
+                        <div class="bottom">
+                            <button ng-click="offers.startOffer(offer)">
+                                <span>Start again</span>
+                            </button>
+                            <button ng-click="offers.archiveOffer(offer)">
+                                <img src="assets/arrow.svg" alt="">
+                                <span>Archive</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="panel archive" ng-style="">
+        <h1 toggle-class="open">Archive offers <img src="assets/dropdown.svg" alt=""></h1>
+        <div class="panel_content">
+            <!--<div class="dropdown-container">-->
+                <!--<div>-->
+                    <!--<label>Sort by:</label>-->
+                    <!--<div uib-dropdown>-->
+                        <!--<button type="button" class="btn-group" uib-dropdown-toggle ng-disabled="disabled">-->
+                            <!--Button dropdown-->
+                        <!--</button>-->
+                        <!--<ul uib-dropdown-menu role="menu">-->
+                            <!--<li role="menuitem"><a href="#">Action</a></li>-->
+                            <!--<li role="menuitem"><a href="#">Another action</a></li>-->
+                            <!--<li role="menuitem"><a href="#">Something else here</a></li>-->
+                            <!--<li role="menuitem"><a href="#">Separated link</a></li>-->
+                        <!--</ul>-->
+                    <!--</div>-->
+                <!--</div>-->
+                <!--<div>-->
+                    <!--<label>City:</label>-->
+                    <!--<div uib-dropdown>-->
+                        <!--<button type="button" class="btn-group" uib-dropdown-toggle ng-disabled="disabled">-->
+                            <!--Button dropdown-->
+                        <!--</button>-->
+                        <!--<ul uib-dropdown-menu role="menu">-->
+                            <!--<li role="menuitem"><a href="#">Action</a></li>-->
+                            <!--<li role="menuitem"><a href="#">Another action</a></li>-->
+                            <!--<li role="menuitem"><a href="#">Something else here</a></li>-->
+                            <!--<li role="menuitem"><a href="#">Separated link</a></li>-->
+                        <!--</ul>-->
+                    <!--</div>-->
+                <!--</div>-->
+                <!--<div>-->
+                    <!--<label>Type:</label>-->
+                    <!--<div uib-dropdown>-->
+                        <!--<button type="button" class="btn-group" uib-dropdown-toggle ng-disabled="disabled">-->
+                            <!--Button dropdown-->
+                        <!--</button>-->
+                        <!--<ul uib-dropdown-menu role="menu">-->
+                            <!--<li role="menuitem"><a href="#">Action</a></li>-->
+                            <!--<li role="menuitem"><a href="#">Another action</a></li>-->
+                            <!--<li role="menuitem"><a href="#">Something else here</a></li>-->
+                            <!--<li role="menuitem"><a href="#">Separated link</a></li>-->
+                        <!--</ul>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+            <ul class="list">
+                <li ng-repeat="offer in offers.offers|filter:{is_archived:true}">
+                    <div class="offer">
+                        <div class="image" style="background-image: url('{{offer.preview}}')"></div>
+                        <div class="name">{{offer.title}}</div>
+                        <div class="date">Updated {{offer.updated | date: 'dd.MM.yyyy'}}</div>
+                        <div class="overlay">
+                            <button ng-click="offers.unarchiveOffer(offer)"><span>Unarchive</span></button>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

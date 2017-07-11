@@ -1,0 +1,43 @@
+<div class="form-field" error="gift_type">
+    <div class="form-title">Gift type</div>
+    <ul class="form-switcher" ng-switcher="step6.offer.gift_type" ng-switcher-class="selected">
+        <li ng-switcher-value="2">Cocktail</li>
+        <li ng-switcher-value="3">Drink</li>
+        <li ng-switcher-value="5">Food</li>
+        <li ng-switcher-value="4">Present</li>
+    </ul>
+    <div class="form-hint">{{serverErrors.gift_type}}</div>
+</div>
+<div class="form-field" error="gift_description">
+    <div class="form-controls">
+        <input type="text" placeholder="Gift name" class="form-input" ng-model="step6.offer.gift_description">
+    </div>
+    <div class="form-hint">{{serverErrors.gift_description}}</div>
+</div>
+<div class="form-field" error="gift_limit_per_user">
+    <div class="form-controls">
+        <input type="text" placeholder="Gift limit per user" class="form-input" ng-model="step6.offer.gift_limit_per_user">
+    </div>
+    <div class="form-hint">{{serverErrors.gift_limit_per_user}}</div>
+</div>
+<div class="form-field" error="gift_limit_per_offer">
+    <div class="form-controls">
+        <input type="text" placeholder="Gift limit per offer" class="form-input" ng-model="step6.offer.gift_limit_per_offer">
+    </div>
+    <div class="form-hint">{{serverErrors.gift_limit_per_offer}}</div>
+</div>
+<div class="form-field" error="gift_limit_per_event">
+    <div class="form-controls">
+        <input type="text" placeholder="Gift limit per recurrence" class="form-input" ng-model="step6.offer.gift_limit_per_event">
+    </div>
+    <div class="form-hint">{{serverErrors.gift_limit_per_event}}</div>
+</div>
+<!--<div class="form-field">-->
+    <!--<div class="form-controls">-->
+        <!--<input type="text" placeholder="Gift limit per for user" class="form-input">-->
+    <!--</div>-->
+<!--</div>-->
+<nav>
+    <a ui-sref="giver.dashboard.offers.edit.step5">Back</a>
+    <div class="btn" ng-click="step6.save()">{{editor.submit}} <img src="assets/right_arrow.svg" alt=""></div>
+</nav>

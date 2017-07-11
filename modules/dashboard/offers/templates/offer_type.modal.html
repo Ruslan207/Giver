@@ -1,0 +1,45 @@
+<div>
+	<h1>Choose offer type:</h1>
+	<ul class="types">
+		<li ng-click="select(0)" ng-class="selectedType == 0?'active':''">
+			<img src="assets/lamp.png"
+			     srcset="assets/lamp@2x.png 2x,
+					 assets/lamp@3x.png 3x">
+			<h2>Basic</h2>
+			<div class="description">
+				Default usability: come to an offer address, take a picture, post it to Facebook with certain mask and
+				get a gift.
+			</div>
+		</li>
+		<li class="inactive" ng-click="select(1)" ng-class="selectedType == 1?'active':''">
+			<img src="assets/private.png"
+			     srcset="assets/private@2x.png 2x,
+					 assets/private@3x.png 3x">
+			<h2>Coming soon</h2>
+			<div class="description">
+				Private offers are protected by secret codes. Only invited users may take a part.
+			</div>
+		</li>
+		<li class="inactive" ng-click="select(2)" ng-class="selectedType == 2?'active':''">
+			<img src="assets/event.png"
+			     srcset="assets/event@2x.png 2x,
+					 assets/event@3x.png 3x">
+			<h2>Coming soon</h2>
+			<div class="description">
+				Events & announces can be advertised for users along the chosen term before the start.
+			</div>
+		</li>
+		<li class="inactive" ng-click="select(3)" ng-class="selectedType == 3?'active':''">
+			<img src="assets/quest.png"
+			     srcset="assets/quest@2x.png 2x,
+					 assets/quest@3x.png 3x">
+			<h2>Coming soon</h2>
+			<div class="description">
+				Quest offers include seperated tasks. Users need to finish all of them to claim the final reward.
+			</div>
+		</li>
+	</ul>
+	<button ng-click="createOffer()">
+		Create
+	</button>
+</div>

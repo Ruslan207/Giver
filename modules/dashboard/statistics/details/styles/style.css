@@ -1,0 +1,202 @@
+.details .panel {
+  padding: 25px 24px 30px 33px;
+}
+.details .panel .total {
+  padding-bottom: 24px;
+  border-bottom: solid 1px #edebef;
+  display: flex;
+}
+.details .panel .total .key {
+  font-family: ProximaNova;
+  font-size: 22px;
+  font-weight: 600;
+  color: #716b78;
+}
+.details .panel .total .value {
+  font-family: ProximaNova;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: right;
+  color: #30144d;
+  margin-left: auto;
+}
+.details .panel .approved {
+  padding-top: 12.5px;
+  padding-bottom: 12.5px;
+  border-bottom: solid 1px #edebef;
+}
+.details .panel .approved > div {
+  display: flex;
+  align-items: center;
+  height: calc(32px + 1em);
+}
+.details .panel .approved > div .key {
+  font-family: ProximaNova;
+  font-size: 18px;
+  font-weight: 600;
+  color: #30144d;
+}
+.details .panel .approved > div .progress {
+  height: 3px;
+  border-radius: 0;
+  margin: 0 auto;
+  width: 234px;
+  background-color: #efefef;
+}
+.details .panel .approved > div .progress .progress-bar {
+  box-shadow: none;
+}
+.details .panel .approved > div .progress .progress-bar-success {
+  background-color: #50e3c2;
+}
+.details .panel .approved > div .progress .progress-bar-danger {
+  background-color: #d0011b;
+}
+.details .panel .approved > div .value {
+  font-family: ProximaNova;
+  font-size: 18px;
+  text-align: right;
+  color: #716b78;
+}
+.details .panel .summary {
+  padding-top: 44px;
+  padding-left: 9px;
+}
+.details .panel .summary .field {
+  padding-right: 0;
+}
+.details .panel .summary .field > div {
+  display: inline-block;
+  vertical-align: top;
+}
+.details .panel .summary .field img {
+  margin-right: 11px;
+}
+.details .panel .summary .field .key {
+  font-family: ProximaNova;
+  font-size: 12px;
+  line-height: 9px;
+  color: #716b78;
+  text-transform: uppercase;
+}
+.details .panel .summary .field .value {
+  line-height: 36px;
+  font-family: ProximaNova;
+  font-size: 32px;
+  font-weight: 600;
+  color: #716b78;
+}
+.details .panel .platforms,
+.details .panel.platforms {
+  display: flex;
+  justify-content: space-between;
+}
+.details .panel .platforms .value,
+.details .panel.platforms .value {
+  font-family: ProximaNova;
+  font-size: 22px;
+  font-weight: 600;
+  color: #30144d;
+  margin-left: 10px;
+  vertical-align: middle;
+  margin-right: 5px;
+}
+.details .panel.platforms {
+  padding: 30px;
+}
+.details .panel .activity {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 3px;
+  margin-bottom: 19px;
+}
+.details .panel .activity .key {
+  font-family: ProximaNova;
+  font-size: 18px;
+  color: #716b78;
+}
+.details .panel .activity .value {
+  font-family: ProximaNova;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: right;
+  color: #716b78;
+}
+.details .panel.post {
+  padding: 0;
+}
+.details .panel.post .photo {
+  position: relative;
+}
+.details .panel.post .photo img {
+  width: 100%;
+}
+.details .panel.post .photo .comment {
+  font-family: ProximaNova;
+  font-size: 18px;
+  color: #5e5765;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.9);
+  position: absolute;
+  bottom: 0;
+  padding-top: 19px;
+  padding-left: 31px;
+  padding-bottom: 22px;
+}
+.details .panel.post .photo .comment .message {
+  font-family: ProximaNova;
+  font-size: 22px;
+  font-weight: 600;
+  color: #30144d;
+}
+.details .panel.post .info {
+  padding: 30px;
+}
+.details .panel.post .user {
+  display: flex;
+}
+.details .panel.post .user .rate {
+  background-image: linear-gradient(135deg, #3023ae, #c96dd8);
+  text-align: center;
+  line-height: 58px;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  font-family: ProximaNova;
+  font-size: 20px;
+  font-weight: 600;
+  color: #ffffff;
+  margin-right: 22px;
+  flex-shrink: 0;
+}
+.details .panel.post .user .name {
+  font-family: ProximaNova;
+  font-size: 22px;
+  font-weight: 600;
+  color: #30144d;
+  word-break: break-all;
+}
+.details .panel.post .user .friends {
+  font-family: ProximaNova;
+  font-size: 18px;
+  color: #5e5765;
+}
+.details .panel.post .user .friends .count {
+  font-weight: 600;
+}
+.details .panel.post .summary {
+  border-top: 1px solid #edebef;
+  padding-top: 35px;
+  margin-top: 27px;
+}
+.details .panel.post .summary .field {
+  height: 22px;
+  padding-left: 4px;
+}
+.details .panel.post .summary .field img {
+  height: 100%;
+}
+.details .panel.post .summary .field .value {
+  line-height: 22px;
+  font-size: 22px;
+}

@@ -1,0 +1,38 @@
+<div class="form-field">
+    <div class="form-title">Date range</div>
+    <div class="form-controls">
+        <input readonly date-range-picker class="form-input" type="text" ng-model="step5.datePicker.date"
+               options="{locale: {format: 'DD.MM.YYYY'},eventHandlers: {'apply.daterangepicker': applyRange}}"/>
+    </div>
+</div>
+<div class="form-field form-week">
+    <div class="form-title">Week</div>
+    <ul>
+        <li ng-class="step5.getClass(0)" ng-click="step5.setCurrDay(0)">Mn</li>
+        <li ng-class="step5.getClass(1)" ng-click="step5.setCurrDay(1)">Tu</li>
+        <li ng-class="step5.getClass(2)" ng-click="step5.setCurrDay(2)">Wd</li>
+        <li ng-class="step5.getClass(3)" ng-click="step5.setCurrDay(3)">Th</li>
+        <li ng-class="step5.getClass(4)" ng-click="step5.setCurrDay(4)">Fr</li>
+        <li ng-class="step5.getClass(5)" ng-click="step5.setCurrDay(5)">Sa</li>
+        <li ng-class="step5.getClass(6)" ng-click="step5.setCurrDay(6)">Su</li>
+    </ul>
+</div>
+<div class="form-row">
+    <div class="form-field">
+        <div class="form-title">Start time</div>
+        <div class="form-controls">
+            <input type="text" class="form-input" ui-mask="99-99" ng-change="step5.submitTime()" ng-model="step5.currDay.day.start_time">
+        </div>
+    </div>
+    <div class="form-field">
+        <div class="form-title">End time</div>
+        <div class="form-controls">
+            <input type="text" class="form-input" ui-mask="99-99" ng-change="step5.submitTime()" ng-model="step5.currDay.day.end_time">
+        </div>
+    </div>
+</div>
+<nav>
+    <a ui-sref="giver.dashboard.offers.edit.step4">Back</a>
+    <div class="btn" ng-click="step5.submitTime()" ui-sref="giver.dashboard.offers.edit.step6">Next step <img src="assets/right_arrow.svg" alt="">
+    </div>
+</nav>

@@ -1,0 +1,17 @@
+<div>
+	<div class="phone"><img src="assets/preview.png" alt=""></div>
+	<div class="info">
+		<header>Preview image</header>
+		<div class="description">
+			It will be used in offers feed to show your offer among other
+		</div>
+		<!--<label class="btn" ng-click="uploadMask()">Upload <img src="assets/right_arrow.svg" alt="">-->
+		<!--<input type="file">-->
+		<!--</label>-->
+		<button class="btn" type="file" ngf-select="upload($file)"
+		        accept="image/png,image/jpeg,image/bmp" ngf-pattern="'*.bmp,*.png,*.jpg'"
+		        ngf-multiple="false" ngf-allow-dir="false">
+			Upload <img src="assets/right_arrow.svg" alt="">
+		</button>
+	</div>
+</div>

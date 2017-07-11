@@ -1,0 +1,443 @@
+.editor {
+  width: 986px;
+}
+.editor .panel {
+  padding-top: 79px;
+  padding-left: 81px;
+}
+.editor .inline {
+  display: inline-block;
+  vertical-align: top;
+}
+.editor .form-row {
+  display: flex;
+  justify-content: space-between;
+}
+.editor .form-row .form-field {
+  width: 215px;
+}
+.editor .form-field {
+  width: 100%;
+  margin-bottom: 40px;
+}
+.editor .form-field.invalid .form-switcher,
+.editor .form-field.invalid .form-controls {
+  border-bottom-color: #d0011b;
+}
+.editor .form-field.invalid .form-hint {
+  color: #d0011b;
+}
+.editor .form-field.form-week .form-title {
+  font-family: ProximaNova;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  padding-bottom: 6px;
+  border-bottom: solid 1px #9b9b9b;
+  margin-bottom: 25px;
+}
+.editor .form-field.form-week ul {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 30px;
+  border-bottom: solid 1px #9b9b9b;
+}
+.editor .form-field.form-week ul li {
+  cursor: pointer;
+  width: 67px;
+  height: 100px;
+  border: solid 1px #d3d3d3;
+  font-family: ProximaNova;
+  font-size: 26px;
+  font-weight: 300;
+  font-style: normal;
+  font-stretch: normal;
+  letter-spacing: normal;
+  color: #9b9b9b;
+  line-height: 100px;
+  text-align: center;
+}
+.editor .form-field.form-week ul li.active {
+  box-shadow: 0 12px 14px 0 rgba(200, 200, 200, 0.5);
+  border: solid 1px #30144d;
+}
+.editor .form-field.form-week ul li.filled:after {
+  width: 7px;
+  height: 7px;
+  background-color: #9b9b9b;
+  content: '';
+  border-radius: 50%;
+  display: block;
+  position: relative;
+  margin: 0 auto;
+  bottom: 23px;
+}
+.editor .form-field.form-week ul li.filled.active:after {
+  background-color: #30144d;
+}
+.editor .form-field .form-title {
+  color: #716b78;
+  font-family: ProximaNova;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  margin-bottom: 8px;
+}
+.editor .form-field .form-switcher {
+  border: none;
+  border-bottom: solid 1px #9b9b9b;
+  padding-bottom: 14px;
+  height: 43px;
+}
+.editor .form-field .form-switcher.input-selected li:not(.selected) {
+  display: none;
+}
+.editor .form-field .form-switcher.input-selected li.selected span {
+  display: none;
+}
+.editor .form-field .form-switcher li {
+  display: inline-block;
+  margin-right: 60px;
+  font-family: ProximaNova;
+  font-size: 18px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #9b9b9b;
+  cursor: pointer;
+}
+.editor .form-field .form-switcher li.selected {
+  color: #30144d;
+  font-weight: 600;
+}
+.editor .form-field .form-switcher li.selected[ng-switcher-custom] {
+  width: 100%;
+}
+.editor .form-field .form-switcher li.selected label {
+  display: inline-block;
+}
+.editor .form-field .form-switcher li label {
+  margin: 0;
+  width: 100%;
+  display: none;
+}
+.editor .form-field .form-switcher li label img {
+  vertical-align: text-bottom;
+  margin-right: 23px;
+  margin-bottom: -2px;
+  cursor: pointer;
+}
+.editor .form-field .form-switcher li input {
+  border: none;
+  padding: 0;
+  margin: 0;
+  font-family: ProximaNova;
+  font-size: 18px;
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #30144d;
+  width: calc(100% - 40px);
+}
+.editor .form-field .form-controls {
+  border-bottom: solid 1px #9b9b9b;
+  margin-bottom: 4px;
+  padding: 0 0 14px;
+  display: flex;
+}
+.editor .form-field .form-controls .form-input {
+  border: none;
+  color: #30144d;
+  font-family: ProximaNova;
+  font-size: 18px;
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  padding: 0;
+  letter-spacing: normal;
+  width: 100%;
+  word-wrap: break-word;
+  background: white;
+  text-align: left;
+}
+.editor .form-field .form-controls .form-input::-webkit-input-placeholder {
+  color: #716b78;
+  font-family: ProximaNova;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+}
+.editor .form-field .form-controls .form-input:-moz-placeholder {
+  color: #716b78;
+  font-family: ProximaNova;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+}
+.editor .form-field .form-controls .form-input::-moz-placeholder {
+  color: #716b78;
+  font-family: ProximaNova;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+}
+.editor .form-field .form-controls .form-input:-ms-input-placeholder {
+  color: #716b78;
+  font-family: ProximaNova;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+}
+.editor .form-field .form-controls .form-input.upload + .form-hint {
+  color: #30144d;
+  font-size: 13px;
+}
+.editor .form-field .form-controls .form-extra {
+  padding: 0;
+  font-family: ProximaNova;
+  font-size: 14px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #9b9b9b;
+  flex-shrink: 0;
+  background: none;
+  border: none;
+}
+.editor .form-field .form-controls .form-extra div {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+.editor .form-field .form-controls .form-extra img:nth-child(2) {
+  margin-left: 13px;
+}
+.editor .form-field .form-controls .form-extra img:first-child {
+  margin-right: 13px;
+}
+.editor .form-field .form-hint {
+  color: #9b9b9b;
+  font-family: ProximaNova;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+}
+.editor [ui-view=container] {
+  width: 550px;
+}
+.editor [ui-view=container] nav {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-bottom: 81px;
+}
+.editor [ui-view=container] nav a {
+  color: #716b78;
+  text-decoration: none;
+  font-family: ProximaNova;
+  font-size: 20px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  margin-right: 41px;
+}
+.editor [ui-view=container] nav .btn {
+  width: 200px;
+  height: 60px;
+  color: white;
+  font-family: ProximaNova;
+  font-size: 20px;
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  border: none;
+  letter-spacing: normal;
+  background-color: #30144d;
+  box-shadow: 0 12px 24px 0 rgba(121, 121, 121, 0.5);
+  text-align: left;
+  padding-left: 20px;
+  padding-right: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.editor [ui-view=container] .input-tag {
+  display: inline-block;
+}
+.editor [ui-view=container] .input-tag .delete-tag {
+  display: inline;
+  cursor: pointer;
+  margin-left: 5px;
+  margin-right: 15px;
+}
+.editor .steps {
+  margin-top: 5px;
+  width: 220px;
+  user-select: none;
+}
+.editor .steps .step {
+  cursor: pointer;
+  color: #e5e5e5;
+  font-family: ProximaNova;
+  font-size: 14px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  letter-spacing: normal;
+  height: 40px;
+  padding-left: 12px;
+  border-left: 2px solid #e5e5e5;
+  line-height: 40px;
+}
+.editor .steps .step.active {
+  border-left-color: #30144d;
+  color: #30144d;
+}
+.map .modal-content,
+.map .modal-dialog {
+  width: 1024px;
+  height: 491px;
+}
+.map .map-row {
+  margin: 0;
+  height: 114px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 56px;
+  padding-left: 40px;
+}
+.map .map-row h3 {
+  font-family: ProximaNova;
+  font-size: 22px;
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #13081e;
+}
+.map .map-row button {
+  width: 146px;
+  height: 54px;
+  background-color: #30144d;
+  box-shadow: 0 2px 14px 0 rgba(0, 0, 0, 0.5);
+  font-family: ProximaNova;
+  font-size: 20px;
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: white;
+  border: none;
+}
+.maskModal,
+.previewModal {
+  display: flex !important;
+  align-items: center;
+}
+.maskModal .phone,
+.previewModal .phone {
+  display: inline-block;
+  width: 268px;
+  height: 447px;
+  margin-top: -60px;
+  margin-left: 40px;
+  margin-right: 40px;
+}
+.maskModal .phone img,
+.previewModal .phone img {
+  width: 100%;
+  height: 100%;
+}
+.maskModal .info,
+.previewModal .info {
+  display: inline-block;
+  width: 200px;
+  vertical-align: middle;
+}
+.maskModal .info header,
+.previewModal .info header {
+  font-family: ProximaNova;
+  font-size: 22px;
+  font-weight: 600;
+  color: #13081e;
+  margin-bottom: 6px;
+  margin-top: 97px;
+}
+.maskModal .info .description,
+.previewModal .info .description {
+  font-family: ProximaNova;
+  font-size: 14px;
+  color: #9b9b9b;
+  margin-bottom: 40px;
+}
+.maskModal .info .btn,
+.previewModal .info .btn {
+  width: 200px;
+  height: 60px;
+  background-color: #30144d;
+  box-shadow: 0 2px 14px 0 rgba(0, 0, 0, 0.5);
+  font-family: ProximaNova;
+  font-size: 20px;
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: white;
+  border: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.maskModal .info .btn input,
+.previewModal .info .btn input {
+  display: none;
+}
+.daterangepicker .daterangepicker_input {
+  display: none;
+}
+.daterangepicker td.active,
+.daterangepicker td.active:hover {
+  background-color: #30144d !important;
+}
+.daterangepicker .applyBtn {
+  background-color: #13081e;
+  border: none;
+}
+.daterangepicker .applyBtn:active:focus {
+  background-color: #13081e !important;
+}

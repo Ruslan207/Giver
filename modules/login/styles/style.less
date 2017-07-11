@@ -1,0 +1,96 @@
+@import '../../giver/styles/colors';
+
+.login {
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	.form {
+		width: 410px;
+		height: 356px;
+		background-color: #ffffff;
+		border: 1px solid #f3f3f3;
+		box-sizing: border-box;
+		&.restore{
+			height: 276px;
+		}
+		&:before {
+			content: '';
+			background: url("../../../assets/logo.svg");
+			display: block;
+			width: 67px;
+			height: 67px;margin: 0 auto;
+			transform: translateY(-34px);
+		}
+		h1 {
+			font-family: ProximaNova;
+			font-size: 22px;
+			font-weight: 600;
+			color: #13081e;
+			margin: -18px 0 26px;
+			text-align: center;
+		}
+		form{
+			padding: 19px 25px 30px;
+		}
+	}
+	footer{
+		width: 410px;
+		font-family: ProximaNova;
+		display: flex;
+		justify-content: space-between;
+		margin-top: 16px;
+		a{
+			@color: #716b78;
+			color: @color;
+			text-decoration: none;
+			font-size: 12px;
+			font-weight: 600;
+			&:visited{
+				color: @color;
+			}
+		}
+	}
+
+	input[type=text], input[type=email], input[type=number], input[type=password]{
+		width: 360px;
+		height: 45px;
+		background-color: @background;
+		border: solid 1px #eceaee;
+		outline: none;
+		padding-left: 20px;
+		box-sizing: border-box;
+		font-family: ProximaNova;
+		font-size: 12px;
+		font-weight: 600;
+		color: #13081e;
+		display: block;
+		margin-top: 3px;
+	}
+
+	button, input[type=submit]{
+		width: 360px;
+		height: 45px;
+		background-color: @primary_color;
+		font-family: ProximaNova;
+		font-size: 12px;
+		font-weight: 600;
+		letter-spacing: 0.5px;
+		color: #ffffff;
+		border: none;
+		outline: none;
+		cursor: pointer;
+		margin-top: 15px;
+	}
+
+	label{
+		font-family: ProximaNova;
+		font-size: 12px;
+		color: #716b78;
+		display: block;
+		&:not(:first-child){
+			margin-top: 14px;
+		}
+	}
+}

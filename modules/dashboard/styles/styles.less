@@ -1,0 +1,131 @@
+@import '../../giver/styles/colors';
+
+.dashboard {
+	header {
+		background: white;
+		height: 64px;
+		width: 100%;
+		display: flex;
+		align-items: center;
+		padding-left: 29px;
+		box-sizing: border-box;
+		position: fixed;
+		top: 0;
+		left: 0;
+		z-index: 2;
+		box-shadow: 0 2px 24px 0 rgba(0, 0, 0, 0.5);
+		.logo {
+			width: 39px;
+			height: 39px;
+			margin-right: 19px;
+		}
+		nav {
+			li {
+				display: inline-block;
+				font-family: ProximaNova;
+				font-size: 12px;
+				font-weight: normal;
+				font-style: normal;
+				font-stretch: normal;
+				line-height: normal;
+				letter-spacing: normal;
+				color: #716b78;
+				margin-right: 50px;
+				cursor: pointer;
+				&.active {
+					color: @primary_color;
+					font-weight: bold;
+				}
+			}
+		}
+		.space {
+			flex-grow: 1;
+		}
+		.user{
+			color: @primary_color;
+			font-family: ProximaNova;
+			font-size: 12px;
+			font-weight: normal;
+			font-style: normal;
+			font-stretch: normal;
+			line-height: normal;
+			letter-spacing: normal;
+			cursor: pointer;
+			margin-right: 19px;
+		}
+	}
+	.container{
+		padding-top: 95px;
+		width: 100%;
+	}
+	.user-popover{
+		border: none;
+		border-radius: 0;
+		min-width: 155px;
+		box-shadow: 0 12px 34px 0 rgba(162, 162, 162, 0.5);
+		margin-top: 40px;
+		.arrow{
+			border: none;
+		}
+		.form-group{
+			margin-bottom: 0;
+		}
+		.popover-content{
+			padding: 0;
+		}
+		section{
+			padding: 9px 19px;
+			&:not(:last-child){
+				border-bottom: solid 2px #e4e4e4;
+			}
+			&.email{
+				font-family: ProximaNova;
+				font-size: 12px;
+				font-weight: normal;
+				font-style: normal;
+				font-stretch: normal;
+				line-height: normal;
+				letter-spacing: normal;
+				color: #716b78;
+			}
+			&.code{
+				h3{
+					font-family: ProximaNova;
+					font-size: 10px;
+					font-weight: normal;
+					font-style: normal;
+					font-stretch: normal;
+					line-height: normal;
+					letter-spacing: normal;
+					color: #716b78;
+					margin-bottom: 1px;
+				}
+				.value{
+					font-family: ProximaNova;
+					font-size: 12px;
+					font-weight: 600;
+					font-style: normal;
+					font-stretch: normal;
+					line-height: normal;
+					letter-spacing: normal;
+					color: @primary_color;
+				}
+			}
+			&.logout{
+				cursor: pointer;
+				font-family: ProximaNova;
+				font-size: 12px;
+				font-weight: 600;
+				font-style: normal;
+				font-stretch: normal;
+				line-height: normal;
+				letter-spacing: normal;
+				color: #716b78;
+				padding-top: 12px;
+				img{
+					margin-right: 9px;
+				}
+			}
+		}
+	}
+}

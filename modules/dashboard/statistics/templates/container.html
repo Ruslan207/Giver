@@ -1,0 +1,62 @@
+<div class="offers">
+    <h1>Offers</h1>
+    <div class="panel">
+        <!--<div class="dropdown-container">-->
+            <!--<div>-->
+                <!--<label>Sort by:</label>-->
+                <!--<div uib-dropdown>-->
+                    <!--<button type="button" class="btn-group" uib-dropdown-toggle ng-disabled="disabled">-->
+                        <!--Button dropdown-->
+                    <!--</button>-->
+                    <!--<ul uib-dropdown-menu role="menu">-->
+                        <!--<li role="menuitem"><a href="#">Action</a></li>-->
+                        <!--<li role="menuitem"><a href="#">Another action</a></li>-->
+                        <!--<li role="menuitem"><a href="#">Something else here</a></li>-->
+                        <!--<li role="menuitem"><a href="#">Separated link</a></li>-->
+                    <!--</ul>-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--<div>-->
+                <!--<label>City:</label>-->
+                <!--<div uib-dropdown>-->
+                    <!--<button type="button" class="btn-group" uib-dropdown-toggle ng-disabled="disabled">-->
+                        <!--Button dropdown-->
+                    <!--</button>-->
+                    <!--<ul uib-dropdown-menu role="menu">-->
+                        <!--<li role="menuitem"><a href="#">Action</a></li>-->
+                        <!--<li role="menuitem"><a href="#">Another action</a></li>-->
+                        <!--<li role="menuitem"><a href="#">Something else here</a></li>-->
+                        <!--<li role="menuitem"><a href="#">Separated link</a></li>-->
+                    <!--</ul>-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--<div>-->
+                <!--<label>Type:</label>-->
+                <!--<div uib-dropdown>-->
+                    <!--<button type="button" class="btn-group" uib-dropdown-toggle ng-disabled="disabled">-->
+                        <!--Button dropdown-->
+                    <!--</button>-->
+                    <!--<ul uib-dropdown-menu role="menu">-->
+                        <!--<li role="menuitem"><a href="#">Action</a></li>-->
+                        <!--<li role="menuitem"><a href="#">Another action</a></li>-->
+                        <!--<li role="menuitem"><a href="#">Something else here</a></li>-->
+                        <!--<li role="menuitem"><a href="#">Separated link</a></li>-->
+                    <!--</ul>-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</div>-->
+        <ul class="list">
+            <li ng-repeat="offer in statistics.offers">
+                <div class="offer" ui-sref="giver.dashboard.statistics.details({id: offer.id})">
+                    <div class="image" style="background-image: url('{{offer.preview}}')"></div>
+                    <div class="name">{{offer.title}}</div>
+                    <div class="date">
+                        Updated {{offer.updated | date: 'dd.MM.yyyy'}}
+                        {{offer.is_archived? ' / Archived': ''}}
+                        {{offer.is_active? '': ' / Stopped'}}
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>

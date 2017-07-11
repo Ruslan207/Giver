@@ -1,0 +1,204 @@
+@import "../../../../giver/styles/colors";
+
+.details {
+	.panel {
+		padding: 25px 24px 30px 33px;
+		.total {
+			padding-bottom: 24px;
+			border-bottom: solid 1px #edebef;
+			display: flex;
+			.key {
+				font-family: ProximaNova;
+				font-size: 22px;
+				font-weight: 600;
+				color: #716b78;
+			}
+			.value {
+				font-family: ProximaNova;
+				font-size: 18px;
+				font-weight: bold;
+				text-align: right;
+				color: @primary_color;
+				margin-left: auto;
+			}
+		}
+		.approved {
+			padding-top: 12.5px;
+			padding-bottom: 12.5px;
+			border-bottom: solid 1px #edebef;
+			> div {
+				display: flex;
+				align-items: center;
+				height: ~"calc(32px + 1em)";
+				.key {
+					font-family: ProximaNova;
+					font-size: 18px;
+					font-weight: 600;
+					color: @primary_color;
+				}
+				.progress {
+					height: 3px;
+					border-radius: 0;
+					margin: 0 auto;
+					width: 234px;
+					background-color: #efefef;
+					.progress-bar {
+						box-shadow: none;
+					}
+					.progress-bar-success {
+						background-color: #50e3c2;
+					}
+					.progress-bar-danger {
+						background-color: #d0011b;
+					}
+				}
+				.value {
+					font-family: ProximaNova;
+					font-size: 18px;
+					text-align: right;
+					color: #716b78;
+				}
+			}
+		}
+		.summary {
+			padding-top: 44px;
+			padding-left: 9px;
+			.field {
+				padding-right: 0;
+				> div {
+					display: inline-block;
+					vertical-align: top;
+				}
+				img {
+					margin-right: 11px;
+				}
+				.key {
+					font-family: ProximaNova;
+					font-size: 12px;
+					line-height: 9px;
+					color: #716b78;
+					text-transform: uppercase;
+				}
+				.value {
+					line-height: 36px;
+					font-family: ProximaNova;
+					font-size: 32px;
+					font-weight: 600;
+					color: #716b78;
+				}
+			}
+		}
+		.platforms, &.platforms {
+			display: flex;
+			justify-content: space-between;
+			.value {
+				font-family: ProximaNova;
+				font-size: 22px;
+				font-weight: 600;
+				color: @primary_color;
+				margin-left: 10px;
+				vertical-align: middle;
+				margin-right: 5px;
+			}
+		}
+		&.platforms {
+			padding: 30px;
+		}
+		.activity {
+			display: flex;
+			justify-content: space-between;
+			padding-top: 3px;
+			margin-bottom: 19px;
+			.key {
+				font-family: ProximaNova;
+				font-size: 18px;
+				color: #716b78;
+			}
+			.value {
+				font-family: ProximaNova;
+				font-size: 18px;
+				font-weight: bold;
+				text-align: right;
+				color: #716b78;
+			}
+		}
+		&.post {
+			padding: 0;
+			.photo {
+				position: relative;
+				img {
+					width: 100%;
+				}
+				.comment {
+					font-family: ProximaNova;
+					font-size: 18px;
+					color: #5e5765;
+					width: 100%;
+					background-color: rgba(255, 255, 255, 0.9);
+					position: absolute;
+					bottom: 0;
+					padding-top: 19px;
+					padding-left: 31px;
+					padding-bottom: 22px;
+					.message {
+						font-family: ProximaNova;
+						font-size: 22px;
+						font-weight: 600;
+						color: @primary_color;
+					}
+				}
+			}
+			.info {
+				padding: 30px;
+			}
+			.user {
+				display: flex;
+				.rate {
+					background-image: linear-gradient(135deg, #3023ae, #c96dd8);
+					text-align: center;
+					line-height: 58px;
+					width: 55px;
+					height: 55px;
+					border-radius: 50%;
+					font-family: ProximaNova;
+					font-size: 20px;
+					font-weight: 600;
+					color: #ffffff;
+					margin-right: 22px;
+					flex-shrink: 0;
+				}
+				.name {
+					font-family: ProximaNova;
+					font-size: 22px;
+					font-weight: 600;
+					color: @primary_color;
+					word-break: break-all;
+				}
+				.friends {
+					font-family: ProximaNova;
+					font-size: 18px;
+					color: #5e5765;
+					.count {
+						font-weight: 600;
+					}
+				}
+			}
+			.summary{
+				border-top: 1px solid #edebef;
+				padding-top: 35px;
+				margin-top: 27px;
+				.field{
+					height: 22px;
+					padding-left: 4px;
+					img{
+						height: 100%;
+					}
+					.value{
+						line-height: 22px;
+						font-size: 22px;
+					}
+				}
+			}
+		}
+	}
+}

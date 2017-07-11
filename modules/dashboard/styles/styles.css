@@ -1,0 +1,123 @@
+.dashboard header {
+  background: white;
+  height: 64px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding-left: 29px;
+  box-sizing: border-box;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  box-shadow: 0 2px 24px 0 rgba(0, 0, 0, 0.5);
+}
+.dashboard header .logo {
+  width: 39px;
+  height: 39px;
+  margin-right: 19px;
+}
+.dashboard header nav li {
+  display: inline-block;
+  font-family: ProximaNova;
+  font-size: 12px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #716b78;
+  margin-right: 50px;
+  cursor: pointer;
+}
+.dashboard header nav li.active {
+  color: #30144d;
+  font-weight: bold;
+}
+.dashboard header .space {
+  flex-grow: 1;
+}
+.dashboard header .user {
+  color: #30144d;
+  font-family: ProximaNova;
+  font-size: 12px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  cursor: pointer;
+  margin-right: 19px;
+}
+.dashboard .container {
+  padding-top: 95px;
+  width: 100%;
+}
+.dashboard .user-popover {
+  border: none;
+  border-radius: 0;
+  min-width: 155px;
+  box-shadow: 0 12px 34px 0 rgba(162, 162, 162, 0.5);
+  margin-top: 40px;
+}
+.dashboard .user-popover .arrow {
+  border: none;
+}
+.dashboard .user-popover .form-group {
+  margin-bottom: 0;
+}
+.dashboard .user-popover .popover-content {
+  padding: 0;
+}
+.dashboard .user-popover section {
+  padding: 9px 19px;
+}
+.dashboard .user-popover section:not(:last-child) {
+  border-bottom: solid 2px #e4e4e4;
+}
+.dashboard .user-popover section.email {
+  font-family: ProximaNova;
+  font-size: 12px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #716b78;
+}
+.dashboard .user-popover section.code h3 {
+  font-family: ProximaNova;
+  font-size: 10px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #716b78;
+  margin-bottom: 1px;
+}
+.dashboard .user-popover section.code .value {
+  font-family: ProximaNova;
+  font-size: 12px;
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #30144d;
+}
+.dashboard .user-popover section.logout {
+  cursor: pointer;
+  font-family: ProximaNova;
+  font-size: 12px;
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #716b78;
+  padding-top: 12px;
+}
+.dashboard .user-popover section.logout img {
+  margin-right: 9px;
+}
